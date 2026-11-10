@@ -1,6 +1,6 @@
 # eo-landscape-indicators
 
-[![Tests](https://github.com/kbakousi/eo-landscape-indicators/actions/workflows/ci.yml/badge.svg)](https://github.com/kbakousi/eo-landscape-indicators/actions/workflows/ci.yml)
+[![Tests](https://github.com/kbakousi/eo-landscape-indicators/actions/workflows/ci.yml/badge.svg)](https://github.com/kbakousi/eo-landscape-indicators/actions/workflows/ci.yml) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24118750.svg)](https://doi.org/10.5281/zenodo.24118750)
 
 Earth-observation landscape indicators from open satellite and climate data: spectral indices, cloud masking, climate anomalies, trend tests, burned-area frequency, land-cover composition, landscape diversity and fragmentation.
 
@@ -152,3 +152,5 @@ The tutorial in `tutorials/` is executed as part of the test suite (`tests/test_
 ## Licence and citation
 
 Apache-2.0 (see `LICENSE` and `NOTICE`). To cite this software, use `CITATION.cff` ("Cite this repository" on GitHub).
+
+Archived on Zenodo: [doi:10.5281/zenodo.24118750](https://doi.org/10.5281/zenodo.24118750) (all versions; each release also has its own DOI on that page).

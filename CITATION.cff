@@ -9,6 +9,7 @@ version: 0.1.1
 date-released: 2026-11-10
 license: Apache-2.0
 repository-code: "https://github.com/kbakousi/eo-landscape-indicators"
+doi: 10.5281/zenodo.24118750
 keywords: [earth observation, remote sensing, drought, trend analysis, burned area, landscape ecology]
 abstract: >-
   Earth-observation landscape indicators from open data: spectral indices and
