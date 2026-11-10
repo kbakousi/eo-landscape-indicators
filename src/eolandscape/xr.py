@@ -82,7 +82,35 @@ _OUT = "__eolandscape_out__"
 
 def _map(func, *args, dtype="float64", **kwargs):
     """Apply an element-wise numpy function; coordinates kept, lazy on dask."""
-    return xarray.apply_ufunc(func, *args, kwargs=kwargs, dask="parallelized", output_dtypes=[dtype])
+    # Shallow copies (data shared, attrs dicts not): older xarray clears
+    # coordinate attributes on the objects it is given, see below.
+    copies = [a.copy(deep=False) if isinstance(a, (xarray.DataArray, xarray.Dataset)) else a for a in args]
+    out = xarray.apply_ufunc(func, *copies, kwargs=kwargs, dask="parallelized", output_dtypes=[dtype])
+    return _restore_coord_attrs(out, args)
+
+
+def _restore_coord_attrs(out, inputs):
+    """Give coordinates back the attributes they had on the inputs.
+
+    With more than one labelled input, xarray before 2025.7 drops coordinate
+    attributes when it merges the inputs' coordinates (in place, on the inputs
+    too), which loses the CRS stored on ``spatial_ref``. Newer versions keep
+    them; this makes both agree. For each coordinate, the attributes of the
+    first input that has any win.
+    """
+    labelled = [o for o in inputs if isinstance(o, (xarray.DataArray, xarray.Dataset))]
+    if len(labelled) < 2:
+        return out
+    fixed = {}
+    for name in out.coords:
+        if out.coords[name].attrs:
+            continue
+        attrs = next((o.coords[name].attrs for o in labelled if name in o.coords and o.coords[name].attrs), None)
+        if attrs:
+            var = out.coords[name].variable.copy(deep=False)
+            var.attrs = dict(attrs)
+            fixed[name] = var
+    return out.assign_coords(fixed) if fixed else out
 
 
 def _first(a):

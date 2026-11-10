@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
 
+## [0.1.1] - 2026-11-10
+
+### Fixed
+- `xr`: functions with two or more labelled inputs (the indices, `s2_l2a_reflectance` with per-date baselines,
+  `anomalies`, `standardized_anomalies`) lost the CRS on `spatial_ref` with xarray < 2025.7 (the newest xarray
+  for Python 3.10), and also cleared it on the caller's input arrays. Coordinate attributes are now kept and
+  the inputs are left untouched on every supported xarray version.
+
 ## [0.1.0] - 2026-11-13
 
 ### Added

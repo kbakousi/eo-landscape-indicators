@@ -85,6 +85,15 @@ def test_s2_reflectance_uses_each_dates_baseline():
     keeps_grid(out, dn)
 
 
+def test_two_input_functions_leave_the_inputs_crs_alone():
+    # xarray < 2025.7 cleared coordinate attributes on apply_ufunc's inputs.
+    dates = pd.date_range("2024-04-01", periods=2, freq="10D")
+    dn = cube(np.full((2, 2, 2), 1200, dtype="uint16"), dates)
+    baseline = xarray.DataArray(["04.00", "05.11"], dims="time", coords={"time": dn.time})  # no spatial_ref
+    keeps_grid(exr.s2_l2a_reflectance(dn, baseline), dn)
+    assert dn["spatial_ref"].attrs == CRS_ATTRS
+
+
 def test_masks_are_boolean():
     dates = pd.date_range("2024-01-01", periods=1)
     scl = cube(np.array([[[4, 9, 6]]]), dates)

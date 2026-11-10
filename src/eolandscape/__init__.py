@@ -7,4 +7,4 @@ publications cited in its docstring.
 from . import anomalies, diversity, fire, fragmentation, indices, landcover, masking, trends, zonal
 
 __all__ = ["anomalies", "diversity", "fire", "fragmentation", "indices", "landcover", "masking", "trends", "zonal"]
-__version__ = "0.1.0"
+__version__ = "0.1.1"
