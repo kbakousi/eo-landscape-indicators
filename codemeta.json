@@ -1,0 +1,108 @@
+{
+  "@context": "https://w3id.org/codemeta/3.0",
+  "@type": "SoftwareSourceCode",
+  "name": "eo-landscape-indicators",
+  "description": "Earth-observation landscape indicators (spectral indices, climate anomalies, trends, burned area, land-cover diversity and fragmentation) from open data.",
+  "version": "0.1.1",
+  "identifier": "https://doi.org/10.5281/zenodo.24118750",
+  "codeRepository": "https://github.com/kbakousi/eo-landscape-indicators",
+  "issueTracker": "https://github.com/kbakousi/eo-landscape-indicators/issues",
+  "readme": "https://github.com/kbakousi/eo-landscape-indicators#readme",
+  "license": "https://spdx.org/licenses/Apache-2.0",
+  "datePublished": "2026-11-10",
+  "author": [
+    {
+      "@id": "https://orcid.org/0000-0002-2445-1602",
+      "@type": "Person",
+      "givenName": "Aikaterini",
+      "familyName": "Bakousi"
+    }
+  ],
+  "copyrightHolder": [
+    {
+      "@id": "https://orcid.org/0000-0002-2445-1602",
+      "@type": "Person",
+      "givenName": "Aikaterini",
+      "familyName": "Bakousi"
+    }
+  ],
+  "keywords": [
+    "burned area",
+    "drought",
+    "earth observation",
+    "fragmentation",
+    "landsat",
+    "landscape ecology",
+    "modis",
+    "remote sensing",
+    "sentinel-2",
+    "trend analysis"
+  ],
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "Python",
+    "url": "https://www.python.org"
+  },
+  "runtimePlatform": "Python >=3.10",
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "numpy",
+      "name": "numpy",
+      "runtimePlatform": "Python 3",
+      "version": ">=1.24"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "pandas",
+      "name": "pandas",
+      "runtimePlatform": "Python 3",
+      "version": ">=2.0"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "scipy",
+      "name": "scipy",
+      "runtimePlatform": "Python 3",
+      "version": ">=1.10"
+    }
+  ],
+  "developmentStatus": "https://www.repostatus.org/#active",
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.1016/S0034-4257(96)00067-3",
+      "name": "NDWI - a normalized difference water index for remote sensing of vegetation liquid water from space"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.1029/2006GL029127",
+      "name": "A five-year analysis of MODIS NDVI and NDWI for grassland drought assessment over the central Great Plains of the United States"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.1016/j.rse.2018.08.005",
+      "name": "The Collection 6 MODIS burned area mapping algorithm and product"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.1080/01621459.1968.10480934",
+      "name": "Estimates of the regression coefficient based on Kendall's tau"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.1002/hyp.1095",
+      "name": "The influence of autocorrelation on the ability to detect trend in hydrological series"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.1175/2009JCLI2909.1",
+      "name": "A multiscalar drought index sensitive to global warming: the Standardized Precipitation Evapotranspiration Index"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.1007/s10980-006-9013-2",
+      "name": "Mapping spatial patterns with morphological image processing"
+    }
+  ]
+}
