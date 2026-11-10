@@ -1,0 +1,64 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "eo-landscape-indicators"
+type: software
+authors:
+  - family-names: Bakousi
+    given-names: Aikaterini
+version: 0.1.0
+date-released: 2026-11-13
+license: Apache-2.0
+repository-code: "https://github.com/kbakousi/eo-landscape-indicators"
+keywords: [earth observation, remote sensing, drought, trend analysis, burned area, landscape ecology]
+abstract: >-
+  Earth-observation landscape indicators from open data: spectral indices and
+  cloud masking, seasonal climate anomalies, per-pixel trend tests, burned-area
+  frequency, land-cover composition, diversity and fragmentation.
+references:
+  - type: article
+    authors: [{family-names: Gao, given-names: Bo-Cai}]
+    title: "NDWI - a normalized difference water index for remote sensing of vegetation liquid water from space"
+    journal: Remote Sensing of Environment
+    year: 1996
+    doi: 10.1016/S0034-4257(96)00067-3
+  - type: article
+    authors: [{family-names: Gu, given-names: Yingxin}]
+    title: "A five-year analysis of MODIS NDVI and NDWI for grassland drought assessment over the central Great Plains of the United States"
+    journal: Geophysical Research Letters
+    year: 2007
+    doi: 10.1029/2006GL029127
+  - type: article
+    authors: [{family-names: Giglio, given-names: Louis}]
+    title: "The Collection 6 MODIS burned area mapping algorithm and product"
+    journal: Remote Sensing of Environment
+    year: 2018
+    doi: 10.1016/j.rse.2018.08.005
+  - type: article
+    authors: [{family-names: Sen, given-names: Pranab Kumar}]
+    title: "Estimates of the regression coefficient based on Kendall's tau"
+    journal: Journal of the American Statistical Association
+    year: 1968
+    doi: 10.1080/01621459.1968.10480934
+  - type: article
+    authors: [{family-names: Yue, given-names: Sheng}]
+    title: "The influence of autocorrelation on the ability to detect trend in hydrological series"
+    journal: Hydrological Processes
+    year: 2002
+    doi: 10.1002/hyp.1095
+  - type: article
+    authors: [{family-names: Vicente-Serrano, given-names: Sergio M.}]
+    title: "A multiscalar drought index sensitive to global warming: the Standardized Precipitation Evapotranspiration Index"
+    journal: Journal of Climate
+    year: 2010
+    doi: 10.1175/2009JCLI2909.1
+  - type: article
+    authors: [{family-names: Riitters, given-names: Kurt}]
+    title: "Global-scale patterns of forest fragmentation"
+    journal: Conservation Ecology
+    year: 2000
+  - type: article
+    authors: [{family-names: Vogt, given-names: Peter}]
+    title: "Mapping spatial patterns with morphological image processing"
+    journal: Landscape Ecology
+    year: 2007
+    doi: 10.1007/s10980-006-9013-2

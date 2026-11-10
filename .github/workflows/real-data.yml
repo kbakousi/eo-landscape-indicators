@@ -1,0 +1,31 @@
+name: Real-data examples
+# Started by hand (Actions tab -> "Real-data examples" -> Run workflow). Needs network; not part of CI.
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: "First year"
+        default: "2001"
+      end:
+        description: "Last year"
+        default: "2024"
+jobs:
+  modis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[stac]"
+      - env:
+          START: ${{ inputs.start }}
+          END: ${{ inputs.end }}
+        run: |
+          python examples/demo_modis_ndvi_trend.py --start "$START" --end "$END"
+          python examples/demo_mcd64_burned_area.py --start "$START" --end "$END"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: real-data-outputs
+          path: outputs/
