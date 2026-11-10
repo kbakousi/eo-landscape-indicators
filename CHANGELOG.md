@@ -10,7 +10,7 @@ All notable changes to this project are documented here. The format follows [Kee
   for Python 3.10), and also cleared it on the caller's input arrays. Coordinate attributes are now kept and
   the inputs are left untouched on every supported xarray version.
 
-## [0.1.0] - 2026-11-13
+## [0.1.0] - 2026-11-10
 
 ### Added
 - `indices`: NDVI, NDWI (McFeeters and Gao), NDMI, NDDI, NDRE; sensor band maps.

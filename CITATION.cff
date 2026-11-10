@@ -6,7 +6,7 @@ authors:
   - family-names: Bakousi
     given-names: Aikaterini
 version: 0.1.1
-date-released: 2026-11-13
+date-released: 2026-11-10
 license: Apache-2.0
 repository-code: "https://github.com/kbakousi/eo-landscape-indicators"
 keywords: [earth observation, remote sensing, drought, trend analysis, burned area, landscape ecology]
